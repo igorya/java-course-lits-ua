@@ -1,8 +1,8 @@
 package ua.lits.lesson11;
 
-import ua.lits.common.PrintHelper;
 import ua.lits.lesson11.calc.Calculator;
 import ua.lits.lesson11.calc.CalculatorException;
+import ua.lits.common.PrintHelper;
 
 class CalculatorApp {
 
