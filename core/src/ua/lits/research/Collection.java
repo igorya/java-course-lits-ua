@@ -4,6 +4,7 @@ import ua.lits.common.DataBuilder;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Collection {
@@ -11,6 +12,31 @@ public class Collection {
     public static void main(String[] args) {
         doListObject();
         doList();
+        String s = " ku ";
+        Set<Object> set = new TreeSet<>();
+        set.add("ku");
+        set.add(1);
+        System.out.println(s.trim());
+
+        ///
+        int i1 = 20;
+        byte b1 = 100;
+        System.out.println(calculate(b1, i1));
+
+        /// Error
+//        IntStream.rangeClosed(1, 10).flatMap((i, consumer) -> {
+//            for (int j=1; j<=i; j++) {
+//                consumer.accept(j);
+//            }
+//        });
+    }
+
+    ////
+    static int calculate(int i1, int i2) {
+        return i1 + i2;
+    }
+    static double calculate(byte i1, byte i2) {
+        return i1 % i2;
     }
 
     private static void doList() {
