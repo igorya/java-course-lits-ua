@@ -1,0 +1,10 @@
+John	Doe	65	USA, Seattle	john@gmail.com
+John	Snow	44	USA, San Francisco	snow@gmail.com
+Bill	Gates	65	USA, Redmond	user@microsoft.com
+Elon	Musk	65	USA, Florida	elon@spacex.com
+Steven	Tyler	21	USA, Boston	steven@gmail.com
+John3	Doe	12	USA, Boston	john3@gmail.com
+John4	Doe	13	USA, Boston	john4@gmail.com
+Ivan	A	11	Ukraine, Lviv	ivan@gmail.com
+Danylo	B	12	Ukraine, LVIV	danylo@gmail.com
+Ostap	C	18	Ukraine, Lviv	ostap@gmail.com
