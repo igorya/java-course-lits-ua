@@ -5,7 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
-import ua.lits.l20spring.service.UserServiceImpl;
+import ua.lits.l20spring.service.UserService;
 
 @Configuration
 public class LoadDatabase {
@@ -17,7 +17,7 @@ public class LoadDatabase {
     private Resource userResource;
 
     @Bean
-    CommandLineRunner initDatabase(UserServiceImpl userService) {
+    CommandLineRunner initDatabase(UserService userService) {
         return args -> userService.initDatabase(userResource);
     }
 }
