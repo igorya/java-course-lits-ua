@@ -1,15 +1,11 @@
 package ua.lits.l20spring.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import ua.lits.l20spring.service.ResultDumperService;
 import ua.lits.l20spring.service.UserService;
 
 @Component
 public class UserConsoleController {
-
-    private static final Logger logger = LoggerFactory.getLogger(UserConsoleController.class);
 
     private final UserService userService;
 

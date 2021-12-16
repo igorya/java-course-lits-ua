@@ -1,6 +1,6 @@
-package ua.lits.l20spring;
+package ua.lits.l20spring.exception;
 
-public class UserNotFoundException extends RuntimeException {
+public class UserNotFoundException extends NotFoundException {
 
     public UserNotFoundException(String message) {
         super(message);
