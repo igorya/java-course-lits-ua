@@ -12,6 +12,7 @@ import ua.lits.l20spring.model.User;
 import ua.lits.l20spring.repository.UserRepository;
 
 import javax.validation.Validator;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -90,6 +91,13 @@ public class UserServiceImpl extends BaseService implements UserService {
 
     @Override
     public void initDatabase(Resource resource) {
+        final int FIRST_NAME = 0;
+        final int LAST_NAME = 1;
+        final int AGE = 2;
+        final int SALARY = 3;
+        final int ADDRESS = 4;
+        final int EMAIL = 5;
+
         long recordCounter;
         if ((recordCounter = userRepository.count()) > 0) {
             logger.info("Table contains {} records. Skip inserting", recordCounter);
@@ -106,12 +114,12 @@ public class UserServiceImpl extends BaseService implements UserService {
             for (String str : ResourceHelper.readAsList(resource)) {
                 row = str.split("\t", 6);
                 userDTO = UserDTO.builder()
-                        .firstName(row[0])
-                        .lastName(row[1])
-                        .age(Integer.valueOf(row[2]))
-                        .salary(Integer.valueOf(row[3]))
-                        .address(row[4])
-                        .email(row[5])
+                        .firstName(row[FIRST_NAME])
+                        .lastName(row[LAST_NAME])
+                        .age(Integer.valueOf(row[AGE]))
+                        .salary(BigDecimal.valueOf(Double.parseDouble(row[SALARY])))
+                        .address(row[ADDRESS])
+                        .email(row[EMAIL])
                         .build();
                 validate(userDTO);
                 userList.add(modelMapper.map(userDTO, User.class));

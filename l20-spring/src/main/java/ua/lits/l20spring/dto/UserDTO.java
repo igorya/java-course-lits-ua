@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.*;
+import java.math.BigDecimal;
 
 @Data
 @Builder
@@ -27,7 +28,7 @@ public class UserDTO {
     private Integer age;
 
     @Min(value = 1, message = "Salary must be > 0 or null")
-    private Integer salary;
+    private BigDecimal salary;
 
     private String address;
 

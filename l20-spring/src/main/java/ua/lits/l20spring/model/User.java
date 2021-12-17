@@ -3,6 +3,7 @@ package ua.lits.l20spring.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Data
@@ -19,7 +20,7 @@ public class User {
 
     private Integer age;
 
-    private Integer salary;
+    private BigDecimal salary;
 
     private String address;
 
